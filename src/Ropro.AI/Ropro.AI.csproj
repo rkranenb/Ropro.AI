@@ -7,7 +7,7 @@
 
     <!-- NuGet Package -->
     <PackageId>Ropro.AI</PackageId>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>Robert Kranenburg</Authors>
     <Description>A lightweight AI client library built on Microsoft.Extensions.AI.</Description>
     <PackageTags>ai;openai;microsoft-extensions-ai</PackageTags>

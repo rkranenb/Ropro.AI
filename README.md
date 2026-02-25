@@ -16,6 +16,15 @@ A lightweight AI client library built on [Microsoft.Extensions.AI](https://learn
 
 2. Add your AI configuration (for example in `appsettings.json`) so `AddAiClient` can bind `AiClientOptions`.
 
+	```json
+	{
+	  "AiClient": {
+	    "ApiKey": "sk-xxx",
+	    "ModelName": "gpt-5.2"
+	  }
+	}
+	```
+
 3. Replace `Program.cs` with the following minimal host-based setup:
 
 	```csharp
