@@ -23,3 +23,6 @@ packages/
 # OS
 .DS_Store
 Thumbs.db
+
+# Secrets
+nuget-api-key.txt
