@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ropro.AI/Ropro.AI.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Ropro.AI.Tests/Ropro.AI.Tests.csproj" />
+  </Folder>
+</Solution>
