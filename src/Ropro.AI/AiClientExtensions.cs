@@ -1,5 +1,4 @@
 using Microsoft.Extensions.AI;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using OpenAI.Chat;
@@ -8,11 +7,10 @@ namespace Ropro.AI;
 
 public static class AiClientExtensions
 {
-    public static IServiceCollection AddAiClient(
-        this IServiceCollection services,
-        IConfiguration configuration)
+    public static IServiceCollection AddAiClient(this IServiceCollection services)
     {
-        services.Configure<AiClientOptions>(configuration.GetSection("AiClient"));
+        services.AddOptions<AiClientOptions>()
+            .BindConfiguration("AiClient");
 
         services.AddSingleton<IChatClient>(sp =>
         {
