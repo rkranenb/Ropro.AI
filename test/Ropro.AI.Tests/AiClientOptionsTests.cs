@@ -15,7 +15,8 @@ public class AiClientOptionsTests
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
                 ["AiClient:ApiKey"] = "test-api-key",
-                ["AiClient:ModelName"] = "gpt-4o"
+                ["AiClient:ModelName"] = "gpt-4o",
+                ["AiClient:UseResponsesEndpoint"] = "true"
             })
             .Build();
 
@@ -28,6 +29,7 @@ public class AiClientOptionsTests
         // Assert
         Assert.Equal("test-api-key", options.ApiKey);
         Assert.Equal("gpt-4o", options.ModelName);
+        Assert.True(options.UseResponsesEndpoint);
     }
 
     [Fact]
@@ -47,5 +49,6 @@ public class AiClientOptionsTests
         // Assert
         Assert.Equal(string.Empty, options.ApiKey);
         Assert.Equal("gpt-4o-mini", options.ModelName);
+        Assert.False(options.UseResponsesEndpoint);
     }
 }

@@ -20,10 +20,13 @@ A lightweight AI client library built on [Microsoft.Extensions.AI](https://learn
 	{
 	  "AiClient": {
 	    "ApiKey": "sk-xxx",
-	    "ModelName": "gpt-5.2"
+	    "ModelName": "gpt-5.3-codex",
+		"UseResponsesEndpoint": true
 	  }
 	}
 	```
+
+	The UseResponsesEndpoint property should be false for older (GPT-3.5/GPT-4) chat models .
 
 3. Replace `Program.cs` with the following minimal host-based setup:
 
